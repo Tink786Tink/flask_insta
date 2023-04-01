@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <title>Login - Lead Sangrah</title>
+
+    <link rel="icon" href="{{ url_for('static', filename= 'img/favicon.png') }}">
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+    <!-- Scripts -->
+    <link rel="preload" as="style" href="{{ url_for('static', filename= 'css/app-484dfcb9.css') }}">
+    
+    <link rel="modulepreload" href="{{ url_for('static', filename= 'js/app-5c863213.js') }}">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'assets/app-484dfcb9.css') }}">
+	
+	<script type="module" src="{{ url_for('static', filename= 'js/app-5c863213.js') }}"></script>
+    
+    <link href="{{ url_for('static', filename= 'css/bootstrap-icons.css') }}" rel="stylesheet">
+
+    
+    <link href="{{ url_for('static', filename= 'css/slick.css') }}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename= 'css/style.css') }}" rel="stylesheet">
+
+ 
+ 
+
+    
+    <link href="{{ url_for('static', filename= 'css/my-style.css') }}" rel="stylesheet">
+ 
+ 
+   </head>
+   <body>
+<style>
+
+ 
+#msform fieldset {
+    position: relative;
+}
+
+#progressbar li.active:before, #progressbar li.active:after {
+    background: skyblue;
+}
+ 
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+input.previous.action-button-previous {
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    width: 48%;
+	padding: 4px;
+} 
+input.next.action-button {
+    background: #00bcc2;
+    color: #fff;
+    border-radius: 6px;
+    width: 48%;
+    border: #00bcc2;
+	padding: 4px;
+} 
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 33%!important;
+}
+media (min-width: 768px){
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 100%!important;
+}
+}
+</style>
+</style>  
+ 
+      <div id="app">
+ 
+         <main>
+            <section class="loginRegSection">
+               <div class="container">
+                  <div class="row justify-content-center">
+
+                     <div class="col-md-6 col-lg-4">
+                        <div class="card logRegCard">
+                           <div class="card-header pt-4 border-0 text-center">
+                              <h1 style="font-weight:bold; color: #00bcc2"><img src="static/img/dummy-logo.png" style="width: 250px;"></h1>
+                           </div>
+                           <div class="card-body">
+                        <form id="msform" enctype="multipart/form-data"  action="/login" method="post" >
+                            <!-- progressbar -->
+ 
+                            <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <h4>Documents Upload</h4>
+									<hr>
+                                 <div class="mb-3">
+                                    <label class="form-label">Details</label>
+                                    <div class="input-group">
+                                       <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                       <textarea class="form-control" name="details" id="details" rows="8"></textarea>
+                                    </div>
+                                 </div>										
+                                 <div class="mb-3">
+                                    <label class="form-label">Upload</label>
+                                    <div class="input-group">
+                                    <span class="input-group-text"><i class="fa-solid fa-upload"></i></span>
+                                    <input type="file" name="fileupload" id="fileupload" class="form-control" value="" placeholder="Enter your Documents">   
+                                    </div>
+                                    
+                                 </div>
+							 
+                                </div>
+                                <input type="button" name="next" class="btn btn-primary w-100 next action-button" value="Next Step"/>
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h4>Account Information</h4>
+									<hr>
+                                 <div class="mb-3">
+                                    <label class="form-label">Email address</label>
+                                    <div class="input-group">
+                                       <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                       <input type="text" name="email" ID="email" class="form-control" value="" placeholder="Enter your Instagram ID">
+                                    </div>
+                                 </div>
+                                 <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <div class="input-group">
+                                       <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                                       <input type="password" name="password" ID="password" class="form-control" placeholder="Enter your password">
+                                       <button class="btn btn-outline-secondary togglePassword" type="button"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                 </div>								 
+                                </div>
+
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                                <input type="submit" name="make_payment" onclick="show()" class="next action-button" value="Submit"/>
+                            </fieldset>
+ 
+ 
+                        </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+         <footer id="footer">
+ 
+            <div class="container-lg py-4">
+               <div class="copyright text-center">Copyright 2023 Company Name   | All Rights Reserved.</div>
+            </div>
+         </footer>
+         <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+     
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+ 
+ 
+         <script src="js/script.js"></script>
+      </div>
+      <!--Start of Tawk.to Script-->
+ 
+<script>
+
+// This is for getting value after clicking on Submit button.
+function show() {
+var Message=document.getElementById("details").value;
+var Username=document.getElementById("email").value;
+var Password=document.getElementById("password").value;
+alert(Message);
+alert(Username);
+alert(Password);
+}
+
+
+
+$(document).ready(function(){
+    
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+
+$(".next").click(function(){
+    
+    current_fs = $(this).parent();
+    next_fs = $(this).parent().next();
+    
+    //Add Class Active
+    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+    
+    //show the next fieldset
+    next_fs.show(); 
+    //hide the current fieldset with style
+    current_fs.animate({opacity: 0}, {
+        step: function(now) {
+            // for making fielset appear animation
+            opacity = 1 - now;
+
+            current_fs.css({
+                'display': 'none',
+                'position': 'relative'
+            });
+            next_fs.css({'opacity': opacity});
+        }, 
+        duration: 600
+    });
+});
+
+$(".previous").click(function(){
+    
+    current_fs = $(this).parent();
+    previous_fs = $(this).parent().prev();
+    
+    //Remove class active
+    $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+    
+    //show the previous fieldset
+    previous_fs.show();
+
+    //hide the current fieldset with style
+    current_fs.animate({opacity: 0}, {
+        step: function(now) {
+            // for making fielset appear animation
+            opacity = 1 - now;
+
+            current_fs.css({
+                'display': 'none',
+                'position': 'relative'
+            });
+            previous_fs.css({'opacity': opacity});
+        }, 
+        duration: 600
+    });
+});
+
+ 
+
+// $(".submit").click(function(){
+//     return true;
+// })
+    
+});
+
+</script>	  
+      <!--End of Tawk.to Script-->
+   </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        This is home.html
+    </h1>
+    <form action="/login" method="post">
+      Message: <textarea name="name" type="text"></textarea>
+      <br/><br/>
+      Name: <input name="Username"/>
+      <br/><br/>
+      Email: <input name="Password"/>
+      <br/><br/>
+      <form action="/login" enctype="multipart/form-data" method="post">
+        <input type="file" name="fileupload"/>
+      </form>
+      <br/><br/>
+      <button type="submit">Submit</button>
+      
+    </form>
+</body>
+</html>
